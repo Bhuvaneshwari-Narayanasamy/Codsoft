@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resort Landing Page</title>
+    <style>
+        /* Add your CSS styles here */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5dc; /* Beige Background */
+            color: #333; /* Dark Gray Text */
+        }
+        header {
+            background-color: #1e3c72;
+            color: #f5f5f5;
+            padding: 20px;
+            text-align: center;
+        }
+        nav {
+            background-color: #333;
+            overflow: hidden;
+            text-align: center; /* Center align the text inside nav */
+        }
+        nav a {
+            display: inline-block; /* Display as inline-block to center properly */
+            color: white;
+            text-align: center;
+            padding: 12px 24px;
+            text-decoration: none;
+        }
+        nav a:hover {
+            background-color: #0f0f0f;
+            color: black;
+        }
+        .hero {
+            padding: 50px;
+            text-align: center;
+            color: #87CEFA; /* Light Sky Blue */
+            background-color: #add8e6; /* Light Blue */
+        }
+        .hero h1 {
+            font-family: 'Georgia', serif; /* Professional font */
+            font-size: 36px;
+            color: #1e3c72; /* Dark blue */
+            margin-bottom: 20px;
+        }
+        .hero .resort-photo {
+            width: 100%;
+            height: 300px;
+            background: url('C:\Users\bhuva\Downloads\codsoft internship\resort-image.jpeg') center/cover no-repeat;
+            margin: 20px 0;
+        }
+        .hero p {
+            color: #1e3c72; /* Dark blue */
+        }
+        .section {
+            padding: 50px 20px;
+            background-color: #f5f5dc; /* Beige Background */
+            border-top: 1px solid #ccc; /* Light Gray Border on Top */
+        }
+        .section:nth-of-type(even) {
+            background-color: #ececec; /* Slightly darker beige for even sections */
+        }
+        h2 {
+            text-align: center;
+            color: #1e3c72;
+            margin-bottom: 20px;
+        }
+        .services, .rooms, .locations {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+        .service, .room, .location {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            overflow: hidden;
+            max-width: 300px;
+            text-align: center;
+            margin: 10px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .service img, .room img, .location img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        .service h3, .room h3, .location h3 {
+            background-color: #f5f5f5;
+            color: #1e3c72;
+            padding: 10px 0;
+            margin: 0;
+        }
+        .book-slots {
+            text-align: center;
+            margin: 20px 0;
+            background-color: #add8e6; /* Light Blue Background for Slots */
+            padding: 20px;
+        }
+        .book-slots button {
+            background-color: #1e3c72;
+            color: #f5f5f5;
+            border: none;
+            padding: 12px 24px;
+            font-size: 16px;
+            cursor: pointer;
+            margin-top: 10px;
+            border-radius: 5px;
+        }
+        .book-slots button:hover {
+            background-color: #163a5c;
+        }
+        footer {
+            background-color: #1e3c72;
+            color: white;
+            text-align: center;
+            padding: 10px 0; /* Reduced padding */
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        .about {
+            padding: 50px 20px;
+            background-color: #add8e6; /* Light Blue Background */
+        }
+        .about p {
+            text-align: center;
+            font-size: 18px;
+            line-height: 1.6;
+            color: #333; /* Dark Gray Text */
+        }
+    </style>
+    <script>
+        // JavaScript to update the window location when a button is clicked
+        function navigateTo(url) {
+            window.location.href = url;
+        }
+    </script>
+</head>
+<body>
+
+<header>
+    <h1>Welcome to 500 Days of Summer Resort</h1>
+</header>
+
+<nav>
+    <a href="#" onclick="navigateTo('#')">Home</a>
+    <a href="#services" onclick="navigateTo('#services')">Services</a>
+    <a href="#rooms" onclick="navigateTo('#rooms')">Available Rooms</a>
+    <a href="#slots" onclick="navigateTo('#slots')">Slots</a>
+    <a href="#locations" onclick="navigateTo('#locations')">Locations</a>
+    <a href="#about" onclick="navigateTo('#about')">About Us</a>
+</nav>
+
+<div>
+    <div class="hero">
+        <img src="C:\Users\bhuva\Downloads\codsoft internship\resort-image.jpeg" alt="Resort Photo" class="resort-photo">
+        <h1 style="color: #1e3c72;">Your perfect getaway</h1>
+    </div>
+    <div class="section" id="services">
+        <h2>Services</h2>
+        <div class="services">
+            <div class="service">
+                <img src="C:\Users\bhuva\Downloads\codsoft internship\service1.jpeg" alt="Service 1">
+                <h3>Spa & Wellness</h3>
+            </div>
+            <div class="service">
+                <img src="C:\Users\bhuva\Downloads\codsoft internship\service2.jpeg" alt="Service 2">
+                <h3>Gourmet Dining</h3>
+            </div>
+            <div class="service">
+                <img src="C:\Users\bhuva\Downloads\codsoft internship\service3.jpeg" alt="Service 3">
+                <h3>Outdoor Activities</h3>
+            </div>
+        </div>
+    </div>
+    <div class="section" id="rooms">
+        <h2>Available Rooms</h2>
+        <div class="rooms">
+            <div class="room">
+                <img src="C:\Users\bhuva\Downloads\codsoft internship\deluxroom.jpeg" alt="Room 1">
+                <h3>Deluxe Room</h3>
+            </div>
+            <div class="room">
+                <img src="C:\Users\bhuva\Downloads\codsoft internship\suite.jpeg" alt="Room 2">
+                <h3>Suite</h3>
+            </div>
+            <div class="room">
+                <img src="C:\Users\bhuva\Downloads\codsoft internship\familyroom.jpeg" alt="Room 3">
+                <h3>Family Room</h3>
+            </div>
+        </div>
+    </div>
+    <div class="section" id="slots">
+        <h2>Slots</h2>
+        <div class="book-slots">
+            <p>Check our available slots and book your stay today!</p>
+            <button>BOOK A ROOM</button>
+        </div>
+    </div>
+    <div class="section" id="locations">
+        <h2>Locations</h2>
+        <div class="locations">
+            <div class="location">
+                <img src="C:\Users\bhuva\Downloads\codsoft internship\boat-view.jpeg" alt="Location 1">
+                <h3>Bridge Punalur</h3>
+            </div>
+            <div class="location">
+                <img src="C:\Users\bhuva\Downloads\codsoft internship\cheraibeach.jpeg" alt="Locaiton 2">
+                <h3>Cherai Beach</h3>
+            </div>
+            <div class="location">
+                <img src="C:\Users\bhuva\Downloads\codsoft internship\maargait beach.jpeg" alt="Location 3">
+                <h3>Maargait Beach</h3>
+            </div>
+        </div>
+    </div>
+    <div class="section" id="about">
+        <div class="about">
+            <h2>About Us</h2>
+            <p>500 Days of Summer Resort is dedicated to providing an unforgettable experience in luxurious accommodation, fine dining, and relaxation. Nestled in serene landscapes, our resort offers a range of activities and services to cater to every guest's needs.</p>
+        </div>
+    </div>
+</div>
+
+<footer>
+    <p>&copy; 2024 500 Days of Summer Resort. All rights reserved.</p>
+</footer>
+
+</body>
+</html>
